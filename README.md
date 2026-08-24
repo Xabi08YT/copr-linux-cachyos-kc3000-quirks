@@ -25,7 +25,7 @@ We offer a variety of CachyOS kernels ported to Fedora:
 - `kernel-cachyos-rt` - Real-time kernel with BORE scheduler
 - `kernel-cachyos-server` - 300 Hz kernel with default EEVDF scheduler
 
-For Fedora Workstation and Silverblue we recommend `kernel-cachyos` and for Fedora Server, Cloud and CoreOS we recommend `kernel-cachyos-server`. The LTS and Real-time kernels are for special use cases (think embedded systems) and are not recommended unless your application requires them.
+For Fedora Workstation and Silverblue we recommend `kernel-cachyos` and for Fedora Server, Cloud and CoreOS we recommend `kernel-cachyos-server`. The LTS and Real-time kernels are for special use cases (think embedded systems) and are not recommended unless your application requires them. DOn't worry, all of them have the patches for the KC3000 drives.
 
 ## 📢 Announcement 2026/02/23
 **We have removed the support for prebuilt Nvidia drivers with the kernels.**
@@ -46,6 +46,7 @@ The reason for this decision is a mismatch of release schedules between RPMFusio
 - Backported patches from `linux-next`
 - OpenRGB and ACS Override support
 - NTSync patched and integrated into the kernel (exclusive to `kernel-cachyos`)
+- FUA Disabled for Kingston KC 3000 and Fury Renegade drives
 
 ## ⬇️ Installation Instructions
 Make sure your CPU supports the higher target `x86-64` architectures. You need minimum `x86-64-v3` for all kernels, except `kernel-cachyos-lts` and `kernel-cachyos-server` that only require `x86-64-v2`.
