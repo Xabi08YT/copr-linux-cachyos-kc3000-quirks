@@ -1,3 +1,6 @@
+# Quirks for Kingshit (Kingston) SSDs
+%define fix_kingston_firmware_shit 1
+
 # Fedora bits
 %define __spec_install_post %{__os_install_post}
 %define _build_id_links none
@@ -136,6 +139,10 @@ Patch2:         https://raw.githubusercontent.com/CachyOS/copr-linux-cachyos/ref
 
 %if %{_build_nv}
 Patch10:        %{_patch_src}/misc/nvidia/0001-Enable-atomic-kernel-modesetting-by-default.patch
+%endif
+
+%if %{fix_kingston_firmware_shit}
+Patch99:         https://raw.githubusercontent.com/Xabi08YT/copr-linux-cachyos-kc3000-quirks/refs/heads/master/sources/patches/nvme-kingston-kc3000-disable-fua.patch
 %endif
 
 %description
