@@ -1,8 +1,8 @@
 <div align="center">
   <img src="https://github.com/CachyOS/calamares-config/blob/grub-3.2/etc/calamares/branding/cachyos/logo.png" width="64" alt="CachyOS logo"></img>
   <br/>
-  <h1 align="center">CachyOS COPR Repository for Fedora</h1>
-  <p align="center">Goodies from CachyOS ported to Fedora.</p>
+  <h1 align="center">Patched CachyOS COPR Repository for Fedora</h1>
+  <p align="center">Goodies from CachyOS ported to Fedora with quirks for Kingston KC3000 nvme drives</p>
 </div>
 
 This repository is maintained by [@andersrh](https://github.com/andersrh) and [@TrixieUA](https://github.com/TrixieUA).
