@@ -1,7 +1,7 @@
 %global _default_patch_fuzz 2
-%global commitdate 20260930
-%global commit 5cb18a263bc0aa4df59c8affb1296e54b3dd8f2c
-%global revision 1
+%global commitdate 20261002
+%global commit b5762c5eec8cf2c6a558282db7268dc27ca114e5
+%global revision 2
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 %define _disable_source_fetch 0
@@ -68,12 +68,14 @@ cargo build \
      --frozen \
      --workspace \
      --exclude scx_rlfifo \
+     --exclude scx_mavd \
      --exclude scx_mitosis \
      --exclude scx_nitosis \
      --exclude xtask \
      --exclude scx_characterize \
      --exclude vmlinux_docify \
-     --exclude scx_arena_selftests
+     --exclude scx_arena_selftests \
+     --exclude scx_arena_libarena_selftests
 
 %install
 
