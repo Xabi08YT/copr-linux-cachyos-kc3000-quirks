@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+    - "main"
+
+jobs:
+  copr:
+    runs-on: "ubuntu:latest"
+    steps:
+    - name: "Trigger Copr Build"
+      run: "curl -X POST https://copr.fedorainfracloud.org/webhooks/github/254604/add46df9-7cd5-42ff-b68d-ca10e90de6c5/kernel-cachyos/"
